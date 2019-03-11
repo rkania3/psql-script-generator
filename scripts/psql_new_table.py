@@ -1,6 +1,6 @@
 # Create PSQL script for creating new table
 import pandas as pd
-from api import config
+from utils import config
 
 template = """CREATE TABLE IF NOT EXISTS %schema%.%table_name% ({});"""
 
