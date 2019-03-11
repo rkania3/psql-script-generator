@@ -6,4 +6,10 @@ table_name = input("Table name: ")
 schema = input("Schema name: ")
 
 def main():
-    print(psql_new_table.main(file_path, schema, table_name))
+
+    script = psql_new_table.main(file_path, schema, table_name)
+
+    print(script)
+
+    with open("create_table_{}.txt".format(table_name), "w+") as file:
+        file.write(script)
